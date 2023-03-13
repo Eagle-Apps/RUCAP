@@ -43,7 +43,7 @@ $router->group(['prefix' => '/beneficiaries', ], function($router)
     
 });
 
-$router->group(['prefix' => '/beneficiaries', ], function($router)
+$router->group(['prefix' => '/distributor', ], function($router)
 {
     $router->get('/',function () use ($router) {
         return "Distribute is working fine";
