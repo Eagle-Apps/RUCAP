@@ -13,6 +13,8 @@ class Transaction extends Model
      *
      * @var string[]
      */
+
+    protected $table = 'table_distributor_transactions';
     protected $fillable = [
         'productid','clientid','content','amount',
     ];

@@ -14,5 +14,43 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return "Distributor is working fine";
+});
+
+
+$router->group(['prefix' => '/transactions', ], function($router)
+{
+    $router->get('/',function () use ($router) {
+        return "Transactions is working fine";
+    });
+
+    $router->get('/get', "TransactionController@index");
+    $router->Post('/create', "TransactionController@createTransaction");
+    $router->Post('/delete', "TransactionController@deleteTransactions");
+    $router->Post('/update', "TransactionController@updateTransactions");
+    
+});
+
+$router->group(['prefix' => '/beneficiaries', ], function($router)
+{
+    $router->get('/',function () use ($router) {
+        return "Beneficiaries is working fine";
+    });
+    $router->get('/get', "BeneficiariesController@index");
+    $router->Post('/create', "BeneficiariesController@createBeneficiaries");
+    $router->Post('/delete', "BeneficiariesController@deleteBeneficiaries");
+    $router->Post('/update', "BeneficiariesController@updateBeneficiaries");
+    
+});
+
+$router->group(['prefix' => '/beneficiaries', ], function($router)
+{
+    $router->get('/',function () use ($router) {
+        return "Distribute is working fine";
+    });
+    $router->get('/get', "BeneficiariesController@index");
+    $router->Post('/create', "BeneficiariesController@createBeneficiaries");
+    $router->Post('/delete', "BeneficiariesController@deleteBeneficiaries");
+    $router->Post('/update', "BeneficiariesController@updateBeneficiaries");
+    
 });

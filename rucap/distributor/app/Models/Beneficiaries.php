@@ -13,6 +13,8 @@ class Beneficiaries extends Model
      *
      * @var string[]
      */
+    protected $table = 'table_distributor_beneficiaries';
+
     protected $fillable = [
         'name','type',
     ];
