@@ -16,10 +16,8 @@ class BeneficiariesController extends BaseController
     
     public function updateBeneficiaries(Request $request, $id){
         $post = Beneficiaries::find($id);
-        $post->productid= $request->input('productid');
-        $post->clientid= $request->input('clientid');
-        $post->content= $request->input('content');
-        $post->amount= $request->input('amount');
+        $post->name= $request->input('name');
+        $post->type= $request->input('type');
         $post->save();
         return response()->json($post);
     

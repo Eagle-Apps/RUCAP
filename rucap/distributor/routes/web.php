@@ -43,14 +43,14 @@ $router->group(['prefix' => '/beneficiaries', ], function($router)
     
 });
 
-$router->group(['prefix' => '/distributor', ], function($router)
+$router->group(['prefix' => 'models', ], function($router)
 {
     $router->get('/',function () use ($router) {
-        return "Distribute is working fine";
+        return "models is working fine";
     });
-    $router->get('/get', "BeneficiariesController@index");
-    $router->Post('/create', "BeneficiariesController@createBeneficiaries");
-    $router->Post('/delete', "BeneficiariesController@deleteBeneficiaries");
-    $router->Post('/update', "BeneficiariesController@updateBeneficiaries");
+    $router->get('/get', "ModelsController@index");
+    $router->Post('/create', "ModelsController@createModels");
+    $router->Post('/delete', "ModelsController@deleteModels");
+    $router->Post('/update', "ModelsController@updateModels");
     
 });

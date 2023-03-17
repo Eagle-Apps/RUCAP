@@ -26,6 +26,7 @@ public function updateTransactions(Request $request, $id){
     $post->save();
     return response()->json($post);
 
+    
 }
 public function deleteTransactions($id){
     $post= Transaction::find($id);
